@@ -1,0 +1,18 @@
+Galium adds crafting recipes for all accessories, reduces grinds, adds custom weapons and has custom items for the accessories. Doing this makes game time around the same since players can expirement with different set ups and not give players a easy way out of just getting what they want without working for it.
+
+*ChangeLog
+
+ 9/5/18
+ - Release
+
+ 10 Items
+ - 2 Weapons
+ - 8 New Materials
+ Complete Rehuals of Items for crafting
+ - Heart Crystals can be made but must grind
+ - Life Fruit can also be made but require a grind aswell!
+ - 47 new recipes
+ Enemy Drops Changed
+ - 13 Drops Modified 
+
+*Viewing the mods home page will bring you to my discord server for the website with a section call #terraria mainly for this mod but also for other terraria things. If you want to say anything about the mod say it there!*

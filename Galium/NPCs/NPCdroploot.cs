@@ -18,7 +18,7 @@ namespace Galium.NPCs
 		// Addtional if statements here if you would like to add drops to other vanilla npc.
 
         if(npc.type == NPCID.GiantTortoise)//2
-		if (Main.rand.Next(16) == 0) //1 in 3 chance
+		if (Main.rand.Next(10) == 0) //1 in 3 chance
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.TurtleShell, 1);
 		}
@@ -31,7 +31,7 @@ namespace Galium.NPCs
 		if(npc.type == NPCID.SkeletronHead)//4
 		if (Main.rand.Next(5) == 0) //1 in 3 chance
 		{
-		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifePiece"));
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifePiece"), 3);
 		}
 
 		if(npc.type == NPCID.Plantera)//5
@@ -87,6 +87,30 @@ namespace Galium.NPCs
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.GoldenKey);
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.GoldenKey);
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.GoldCoin);
+		}
+
+		if(npc.type == NPCID.QueenBee)//14
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Boomstick);
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.IllegalGunParts);
+		}
+
+		if(npc.type == NPCID.BlueJellyfish)//8
+		if (Main.rand.Next(5) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
+		}
+
+		if(npc.type == NPCID.PinkJellyfish)//8
+		if (Main.rand.Next(5) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
+		}
+
+		if(npc.type == NPCID.GreenJellyfish)//8
+		if (Main.rand.Next(5) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
 		}
 	}
 }

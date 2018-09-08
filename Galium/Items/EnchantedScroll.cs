@@ -1,6 +1,7 @@
 using Terraria;
 using Microsoft.Xna.Framework;
 using Terraria.ID;
+using Terraria.DataStructures;
 using Terraria.ModLoader;
 
 namespace Galium.Items
@@ -10,13 +11,13 @@ namespace Galium.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Enchanted Scroll");
-            Tooltip.SetDefault("The Essence of Strength Tingles in your fingers as You hold it.");
+			Tooltip.SetDefault("'The Essence of Strenght tingles in your Fingers as you Hold the Scroll'");
         }
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
+			item.width = 30;
+			item.height = 30;
             item.maxStack = 30;
             item.value = 500;
             item.rare = 2;

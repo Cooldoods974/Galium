@@ -16,12 +16,12 @@ namespace Galium.Items
 
 		public override void SetDefaults()
 		{
-			item.damage = 25;
+			item.damage = 20;
 			item.ranged = true;
 			item.width = 40;
 			item.height = 40;
-			item.useTime = 40;
-			item.useAnimation = 40;
+			item.useTime = 50;
+			item.useAnimation = 50;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
@@ -54,10 +54,10 @@ namespace Galium.Items
 		}
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 3 + Main.rand.Next(2); // 3 or 4 shots
+			int numberProjectiles = 5 + Main.rand.Next(2); // 5 or 6 shots
 			for (int i = 0; i < numberProjectiles; i++)
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(15)); // 30 degree spread.
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
 				// If you want to randomize the speed to stagger the projectiles
 				// float scale = 1f - (Main.rand.NextFloat() * .3f);
 				// perturbedSpeed = perturbedSpeed * scale; 
@@ -67,7 +67,7 @@ namespace Galium.Items
 		}
         public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(10, 0);
+			return new Vector2(5, 0);
 		}
 //-------------------------------------------------------------
 		// What if I wanted this gun to have a 38% chance not to consume ammo?

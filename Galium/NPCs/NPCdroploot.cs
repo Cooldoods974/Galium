@@ -113,5 +113,17 @@ namespace Galium.NPCs
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
 		}
 	}
+	public override void SetupShop(int type, Chest shop, ref int nextSlot)
+        {
+		
+
+            if (type == NPCID.ArmsDealer)
+            {
+
+                shop.item[nextSlot].SetDefaults(mod.ItemType<Items.GunHandBook>());
+                nextSlot++;
+			}
+		}
+	
 }
 }

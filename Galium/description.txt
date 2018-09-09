@@ -2,6 +2,12 @@ Galium adds crafting recipes for all accessories, reduces grinds, adds custom we
 
 *ChangeLog
  9/8/18
+ - Added 1 new Items
+ - Fixed Recipes For Items
+ - Minor Bug Fixes
+ - Thx to Jacko for Noticing Bugs!
+
+ 9/8/18
  - Added 3 new items
  - Resprite for All Items
  - Removed Rubber Ball

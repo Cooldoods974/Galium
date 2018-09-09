@@ -62,7 +62,58 @@ namespace Galium
 			recipe = new ModRecipe(this);
     		recipe.AddIngredient(null, "EnchantedScroll");
 			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Aglet);
 			recipe.AddIngredient(ItemID.Amethyst);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.AnkletoftheWind);
+    		recipe.AddRecipe();
+
+			//AnkletoftheWind 5
+			recipe = new ModRecipe(this);
+    		recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Aglet);
+			recipe.AddIngredient(ItemID.Ruby);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.AnkletoftheWind);
+    		recipe.AddRecipe();
+
+			//AnkletoftheWind 5
+			recipe = new ModRecipe(this);
+    		recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Aglet);
+			recipe.AddIngredient(ItemID.Diamond);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.AnkletoftheWind);
+    		recipe.AddRecipe();
+
+			//AnkletoftheWind 5
+			recipe = new ModRecipe(this);
+    		recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Aglet);
+			recipe.AddIngredient(ItemID.Sapphire);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.AnkletoftheWind);
+    		recipe.AddRecipe();
+
+			//AnkletoftheWind 5
+			recipe = new ModRecipe(this);
+    		recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Topaz);
+			recipe.AddIngredient(ItemID.Amethyst);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.AnkletoftheWind);
+    		recipe.AddRecipe();
+
+			//AnkletoftheWind 5
+			recipe = new ModRecipe(this);
+    		recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(ItemID.VineRope);
+			recipe.AddIngredient(ItemID.Aglet);
+			recipe.AddIngredient(ItemID.Emerald);
     		recipe.AddTile(TileID.Anvils);
     		recipe.SetResult(ItemID.AnkletoftheWind);
     		recipe.AddRecipe();
@@ -102,7 +153,8 @@ namespace Galium
 			//CloudinaBottle 10
 			recipe = new ModRecipe(this);
 			recipe.AddIngredient(ItemID.Cloud, 3);
-			recipe.AddIngredient(null, "EnchantedScroll", 2);
+			recipe.AddIngredient(null, "EnchantedScroll");
+			recipe.AddIngredient(null, "Rubber");
     		recipe.AddTile(TileID.WorkBenches);
     		recipe.SetResult(ItemID.CloudinaBottle);
     		recipe.AddRecipe();
@@ -390,6 +442,7 @@ namespace Galium
 			recipe.AddIngredient(ItemID.SoulofMight);
 			recipe.AddIngredient(null, "EnchantedScroll");
 			recipe.AddIngredient(ItemID.SharkFin, 3);
+			recipe.AddIngredient(ItemID.Chain);
     		recipe.AddTile(TileID.Anvils);
     		recipe.SetResult(ItemID.SharkToothNecklace);
     		recipe.AddRecipe();

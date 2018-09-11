@@ -6,69 +6,59 @@ using Terraria.ModLoader;
 
 namespace Galium.Items
 {
-	public class ShotgunRevolver : ModItem
+	public class LaserUzi : ModItem
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shotgun Revolver");
-            Tooltip.SetDefault("A shotgun and revolver... Not even gonna question.");
+			DisplayName.SetDefault("Laser Uzi");
+            Tooltip.SetDefault("PEW PEW PEW");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 20;
+			item.damage = 60;
+            item.crit = 0;
 			item.ranged = true;
-			item.width = 40;
-			item.height = 40;
-			item.useTime = 50;
-			item.useAnimation = 50;
+			item.width = 54;
+			item.height = 20;
+			item.useTime = 4;
+			item.useAnimation = 4;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
-			item.knockBack = 1;
-			item.value = Item.buyPrice(0, 1, 0, 0); 
+			item.knockBack = 2;
+			item.value = Item.buyPrice(0, 3, 0, 0); 
             item.value = Item.sellPrice(0, 1, 0, 0);
-			item.rare = 3;
+			item.rare = 8;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
-			item.shootSpeed = 16f;
+			item.shootSpeed = 50f;
 			item.useAmmo = AmmoID.Bullet;
 		}
 
 		public override void AddRecipes()
 		{
 			ModRecipe recipe = new ModRecipe(mod);
-			recipe.AddIngredient(ItemID.TheUndertaker);
-            recipe.AddIngredient(ItemID.Boomstick);
-			recipe.AddTile(TileID.Anvils);
+			recipe.AddIngredient(ItemID.Uzi);
+            recipe.AddIngredient(ItemID.MeteoriteBar, 5);
+			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
-
-            recipe = new ModRecipe(mod);
-            recipe.AddIngredient(ItemID.Musket);
-            recipe.AddIngredient(ItemID.Boomstick);
-			recipe.AddTile(TileID.Anvils);
-			recipe.SetResult(this);
-			recipe.AddRecipe();
-            
+		}
+       
+        public override Vector2? HoldoutOffset()
+		{
+			return new Vector2(-8, -2);
 		}
         public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
 		{
-			int numberProjectiles = 5 + Main.rand.Next(2); // 5 or 6 shots
-			for (int i = 0; i < numberProjectiles; i++)
+			if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
 			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
-				// If you want to randomize the speed to stagger the projectiles
-				// float scale = 1f - (Main.rand.NextFloat() * .3f);
-				// perturbedSpeed = perturbedSpeed * scale; 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+				type = ProjectileID.NanoBullet; // or ProjectileID.FireArrow;
 			}
-			return false; // return false because we don't want tmodloader to shoot projectile
+			return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
 		}
-        public override Vector2? HoldoutOffset()
-		{
-			return new Vector2(-3, 0);
-		}
+        
 //-------------------------------------------------------------
 		// What if I wanted this gun to have a 38% chance not to consume ammo?
 		/*public override bool ConsumeAmmo(Player player)

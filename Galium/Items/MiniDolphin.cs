@@ -16,13 +16,13 @@ namespace Galium.Items
 
 		public override void SetDefaults()
 		{
-			item.damage = 20;
-            item.crit = 1;
+			item.damage = 18;
+            item.crit = 0;
 			item.ranged = true;
 			item.width = 54;
 			item.height = 20;
-			item.useTime = 6;
-			item.useAnimation = 6;
+			item.useTime = 8;
+			item.useAnimation = 9;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 1;
@@ -32,7 +32,7 @@ namespace Galium.Items
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
-			item.shootSpeed = 10f;
+			item.shootSpeed = 7f;
 			item.useAmmo = AmmoID.Bullet;
 		}
 
@@ -45,22 +45,10 @@ namespace Galium.Items
 			recipe.SetResult(this);
 			recipe.AddRecipe();
 		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			int numberProjectiles = 1 + Main.rand.Next(2); // 1 or 2 shots
-			for (int i = 0; i < numberProjectiles; i++)
-			{
-				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(1)); // 1 degree spread.
-				// If you want to randomize the speed to stagger the projectiles
-				// float scale = 1f - (Main.rand.NextFloat() * .3f);
-				// perturbedSpeed = perturbedSpeed * scale; 
-				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
-			}
-			return false; // return false because we don't want tmodloader to shoot projectile
-		}
+       
         public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(10, -5);
+			return new Vector2(-5, 0);
 		}
         public override bool ConsumeAmmo(Player player)
 		{

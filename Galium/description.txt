@@ -1,6 +1,11 @@
 Galium adds crafting recipes for all accessories, reduces grinds, adds custom weapons and has custom items for the accessories. Doing this makes game time around the same since players can expirement with different set ups and not give players a easy way out of just getting what they want without working for it.
 
 *ChangeLog
+ 9/11/18
+ - Added 3 Items
+ - Bug Fixes
+ - Sprite by Jacko :)
+ - Item Changes
  9/8/18
  - Added 1 new Items
  - Fixed Recipes For Items

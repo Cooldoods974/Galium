@@ -38,6 +38,12 @@ namespace Galium.NPCs
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeFruitSeed"), 3);
 		}
+
+		if(npc.type == NPCID.Plantera)//5
+		if (Main.rand.Next(5) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Uzi, 1);
+		}
 		
 		//angry bones, ph dun enemys
 		if(npc.type == NPCID.AngryBones)//6
@@ -90,6 +96,7 @@ namespace Galium.NPCs
 		}
 
 		if(npc.type == NPCID.QueenBee)//14
+		if (Main.rand.Next(2) == 0) //1 in 3 chance
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Boomstick);
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.IllegalGunParts);
@@ -113,6 +120,7 @@ namespace Galium.NPCs
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
 		}
 	}
+	//buyslots
 	public override void SetupShop(int type, Chest shop, ref int nextSlot)
         {
 		

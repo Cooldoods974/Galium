@@ -1,6 +1,13 @@
 Galium adds crafting recipes for all accessories, reduces grinds, adds custom weapons and has custom items for the accessories. Doing this makes game time around the same since players can expirement with different set ups and not give players a easy way out of just getting what they want without working for it.
 
 *ChangeLog
+ 9/15/18
+ - Added 3 more Items
+ - Bug Fixes
+ - Item Changes
+ - Support for More Events
+ - An Out of This World Update
+
  9/11/18
  - Added 3 Items
  - Bug Fixes
@@ -35,4 +42,5 @@ Galium adds crafting recipes for all accessories, reduces grinds, adds custom we
  Enemy Drops Changed
  - 13 Drops Modified 
 
+USE A RECIPE MOD!!!!
 *Viewing the mods home page will bring you to my discord server for the website with a section call #terraria mainly for this mod but also for other terraria things. If you want to say anything about the mod say it there!*

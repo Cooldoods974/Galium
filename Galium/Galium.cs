@@ -540,7 +540,46 @@ namespace Galium
     		recipe.SetResult(ItemID.LifeFruit);
     		recipe.AddRecipe();
 
-			
+			//BrokenHeroSword 48
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "SpaceBar", 8);
+			recipe.AddIngredient(null, "DarkMatter");
+    		recipe.AddTile(TileID.MythrilAnvil);
+    		recipe.SetResult(ItemID.BrokenHeroSword);
+    		recipe.AddRecipe();
+
+			//TheEyeofCthulhu //49
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "Retina", 2);
+			recipe.AddIngredient(ItemID.SoulofMight);
+			recipe.AddIngredient(null, "DarkMatter");
+    		recipe.AddTile(TileID.MythrilAnvil);
+    		recipe.SetResult(ItemID.RedString);
+    		recipe.AddRecipe();
+
+			//MothronWings 50
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "SpaceBar", 10);
+			recipe.AddIngredient(ItemID.SoulofFlight, 25);
+    		recipe.AddTile(TileID.MythrilAnvil);
+    		recipe.SetResult(ItemID.MothronWings);
+    		recipe.AddRecipe();
+
+			//DeathSickle 51
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "DarkMatter", 3);
+			recipe.AddIngredient(ItemID.SoulofNight);
+    		recipe.AddTile(TileID.MythrilAnvil);
+    		recipe.SetResult(ItemID.DeathSickle);
+    		recipe.AddRecipe();
+
+			//BrokenBatWing 52
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "DarkMatter", 5);
+			recipe.AddIngredient(ItemID.SoulofNight, 15);
+    		recipe.AddTile(TileID.MythrilAnvil);
+    		recipe.SetResult(ItemID.BrokenBatWing);
+    		recipe.AddRecipe();
 		}
 	}
 }

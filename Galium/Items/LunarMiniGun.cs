@@ -21,8 +21,8 @@ namespace Galium.Items
 			item.ranged = true;
 			item.width = 36;
 			item.height = 15;
-			item.useTime = 2;
-			item.useAnimation = 2;
+			item.useTime = 5;
+			item.useAnimation = 5;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 0;
@@ -32,7 +32,7 @@ namespace Galium.Items
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
 			item.shoot = 10; //idk why but all the guns in the vanilla source have this
-			item.shootSpeed = 100f;
+			item.shootSpeed = 16f;
 			item.useAmmo = AmmoID.Bullet;
 		}
 
@@ -63,6 +63,16 @@ public override bool Shoot(Player player, ref Vector2 position, ref float speedX
 			type = ProjectileID.MoonlordBullet; // or ProjectileID.FireArrow;
 			}
 			return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
+			int numberProjectiles = 5 + Main.rand.Next(2); // 5 or 6 shots
+			for (int i = 0; i < numberProjectiles; i++)
+			{
+				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.
+				// If you want to randomize the speed to stagger the projectiles
+				// float scale = 1f - (Main.rand.NextFloat() * .3f);
+				// perturbedSpeed = perturbedSpeed * scale; 
+				Projectile.NewProjectile(position.X, position.Y, perturbedSpeed.X, perturbedSpeed.Y, type, damage, knockBack, player.whoAmI);
+			}
+			return false; // return false because we don't want tmodloader to shoot projectile
 		}
         
     }

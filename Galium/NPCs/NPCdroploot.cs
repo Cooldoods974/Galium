@@ -102,22 +102,62 @@ namespace Galium.NPCs
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.IllegalGunParts);
 		}
 
-		if(npc.type == NPCID.BlueJellyfish)//8
+		if(npc.type == NPCID.BlueJellyfish)//15
 		if (Main.rand.Next(5) == 0) //1 in 3 chance
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
 		}
 
-		if(npc.type == NPCID.PinkJellyfish)//8
+		if(npc.type == NPCID.PinkJellyfish)//16
 		if (Main.rand.Next(5) == 0) //1 in 3 chance
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
 		}
 
-		if(npc.type == NPCID.GreenJellyfish)//8
+		if(npc.type == NPCID.GreenJellyfish)//17
 		if (Main.rand.Next(5) == 0) //1 in 3 chance
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("LifeJar"));
+		}
+
+		if(npc.type == NPCID.Frankenstein)//18
+		if (Main.rand.Next(4) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarMoonPiece"), 2);
+		}
+
+		if(npc.type == NPCID.Mothron)//19
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarMoonPiece"), 13);
+		}
+		
+		if(npc.type == NPCID.MothronSpawn)//20
+		if (Main.rand.Next(10) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("SolarMoonPiece"));
+		}
+		
+		if(npc.type == NPCID.Reaper)//21
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DarkMatter"), 3);
+		}
+
+		if(npc.type == NPCID.Lihzahrd)//22
+		if(Main.rand.Next(8) == 0)
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LihzahrdPowerCell);
+		}
+		
+		if(npc.type == NPCID.LihzahrdCrawler)//23
+		if(Main.rand.Next(8) == 0)
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LihzahrdPowerCell);
+		}
+		
+		if(npc.type == NPCID.FlyingSnake)//24
+		if(Main.rand.Next(8) == 0)
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LihzahrdPowerCell);
 		}
 	}
 	//buyslots

@@ -554,7 +554,7 @@ namespace Galium
 			recipe.AddIngredient(ItemID.SoulofMight);
 			recipe.AddIngredient(null, "DarkMatter");
     		recipe.AddTile(TileID.MythrilAnvil);
-    		recipe.SetResult(ItemID.RedString);
+    		recipe.SetResult(ItemID.TheEyeOfCthulhu);
     		recipe.AddRecipe();
 
 			//MothronWings 50

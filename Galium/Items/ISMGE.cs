@@ -19,8 +19,8 @@ namespace Galium.Items
 			item.damage = 1;
             item.crit = 0;
 			item.ranged = true;
-			item.width = 36;
-			item.height = 15;
+			item.width = 70;
+			item.height = 28;
 			item.useTime = 2;
 			item.useAnimation = 2;
 			item.useStyle = 5;
@@ -49,7 +49,7 @@ namespace Galium.Items
        
         public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(-5, 0);
+			return new Vector2(-15, 0);
 		}
         public override bool ConsumeAmmo(Player player)
 		{

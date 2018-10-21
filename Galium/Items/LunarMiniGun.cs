@@ -16,18 +16,18 @@ namespace Galium.Items
 
 		public override void SetDefaults()
 		{
-			item.damage = 50;
+			item.damage = 115;
             item.crit = 10;
 			item.ranged = true;
 			item.width = 36;
 			item.height = 15;
-			item.useTime = 5;
-			item.useAnimation = 5;
+			item.useTime = 2;
+			item.useAnimation = 2;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 0;
 			item.value = Item.buyPrice(1, 0, 0, 0); 
-            item.value = Item.sellPrice(5, 10, 0, 0);
+            item.value = Item.sellPrice(5, 0, 0, 0);
 			item.rare = -12;
 			item.UseSound = SoundID.Item11;
 			item.autoReuse = true;
@@ -63,7 +63,7 @@ public override bool Shoot(Player player, ref Vector2 position, ref float speedX
 			type = ProjectileID.MoonlordBullet; // or ProjectileID.FireArrow;
 			}
 			return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
-			int numberProjectiles = 5 + Main.rand.Next(2); // 5 or 6 shots
+			int numberProjectiles = 3 + Main.rand.Next(2); // 5 or 6 shots
 			for (int i = 0; i < numberProjectiles; i++)
 			{
 				Vector2 perturbedSpeed = new Vector2(speedX, speedY).RotatedByRandom(MathHelper.ToRadians(30)); // 30 degree spread.

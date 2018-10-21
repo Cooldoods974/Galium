@@ -12,7 +12,7 @@ namespace Galium.NPCs
 		if(npc.type == NPCID.EyeofCthulhu) //1
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("Retina"), 2);
-		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Lens, 1);
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.Lens, 3);
 		}
 
 		// Addtional if statements here if you would like to add drops to other vanilla npc.
@@ -142,6 +142,12 @@ namespace Galium.NPCs
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, mod.ItemType("DarkMatter"), 3);
 		}
 
+		if(npc.type == NPCID.Reaper)//21
+		if (Main.rand.Next(3) == 0) //1 in 3 chance
+		{
+		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.SoulofNight, 5);
+		}
+
 		if(npc.type == NPCID.Lihzahrd)//22
 		if(Main.rand.Next(8) == 0)
 		{
@@ -158,6 +164,61 @@ namespace Galium.NPCs
 		if(Main.rand.Next(8) == 0)
 		{
 		Item.NewItem((int)npc.position.X, (int)npc.position.Y, npc.width, npc.height, ItemID.LihzahrdPowerCell);
+		}
+
+		if(npc.type == NPCID.Pumpking)//25
+		{
+		Item.NewItem(npc.getRect(), mod.ItemType("Pumpy"), Main.rand.Next(10, 20));
+		}
+
+		if(npc.type == NPCID.Scarecrow1)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+
+		if(npc.type == NPCID.Scarecrow2)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow3)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow4)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow5)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow6)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow7)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow8)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow9)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
+		}
+		
+		if(npc.type == NPCID.Scarecrow10)//26
+		{
+		Item.NewItem(npc.getRect(), ItemID.Hay, Main.rand.Next(20, 37));
 		}
 	}
 	//buyslots

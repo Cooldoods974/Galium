@@ -1,4 +1,4 @@
 author = Zevix
-version = 1.3.4
+version = 1.4.0
 displayName = Galium
 homepage = https://discord.gg/gX9jVeQ

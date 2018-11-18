@@ -1,8 +1,26 @@
-Galium adds crafting recipes for all accessories, reduces grinds, adds custom weapons and has custom items for the accessories. Doing this makes game time around the same since players can expirement with different set ups and not give players a easy way out of just getting what they want without working for it.
+Galium Is a content mod that is always Updated and had a very active Community, I Currently has 42 New Items, 53 New Recipes
 
 *ChangeLog
+ 11/18/18
+ - Version 1.4
+ - Adds 16 New Items
+ - 4 New Enemies
+ - A new Ore, Armor, Tools, and Weapons
+ - Fixed Alot of Bugs
+ - 11 Resprites (Thank You Drones)
+ - New Drops from Old Enemies
+ - 54 New Recipes in Total
+ - I Would just Want to thank Gabe, Jacko, Koid, And Sproot For Helping me with this mod, None of this would be possible without you guys! And Thank you For 13,000 Thousand Downloads!
+
  10/21/18
- - Holloween Update!
+ - Halloween Update 2!
+ - More NPC Drops
+ - 3 More New Items
+ - Bug Fixes
+ - New Drops for Wall of Flesh
+
+ 10/20/18
+ - Halloween Update!
  - New NPC Drop Reworks 
  - Pumpkin Moon Reworks
  - 3 New Items

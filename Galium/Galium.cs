@@ -7,9 +7,6 @@ namespace Galium
 {
 	class Galium : Mod
 	{
-					
-		
-
 		public override void AddRecipes()
 		{
 			// waterbolt 1
@@ -580,6 +577,26 @@ namespace Galium
     		recipe.AddTile(TileID.MythrilAnvil);
     		recipe.SetResult(ItemID.BrokenBatWing);
     		recipe.AddRecipe();
+
+			//FlyingCarpet 53
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(null, "EnchantedScroll", 3);
+			recipe.AddIngredient(ItemID.Leather, 5);
+			recipe.AddIngredient(ItemID.Silk, 3);
+			recipe.AddIngredient(ItemID.Cloud, 25);
+			recipe.AddIngredient(ItemID.CloudinaBottle);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.FlyingCarpet);
+    		recipe.AddRecipe();
+
+			//Hellforge 54
+			recipe = new ModRecipe(this);
+			recipe.AddIngredient(ItemID.Obsidian, 15);
+			recipe.AddIngredient(ItemID.Hellstone, 20);
+    		recipe.AddTile(TileID.Anvils);
+    		recipe.SetResult(ItemID.Hellforge);
+    		recipe.AddRecipe();
 		}
+		 
 	}
 }

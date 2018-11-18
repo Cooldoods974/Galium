@@ -14,10 +14,10 @@ namespace Galium.Items
 		{
 			item.damage = 120;
 			item.melee = true;
-			item.width = 40;
+			item.width = 56;
 			item.height = 40;
-			item.useTime = 32;
-			item.useAnimation = 32;
+			item.useTime = 25;
+			item.useAnimation = 25;
 			item.useStyle = 1;
 			item.knockBack = 2;
 			item.crit = 13;

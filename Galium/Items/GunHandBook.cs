@@ -10,7 +10,7 @@ namespace Galium.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Gun Handbook");
-            Tooltip.SetDefault("Increased Bullet Damge by 20%");
+            Tooltip.SetDefault("Increased Bullet Damage by 20%");
         }
 
         public override void SetDefaults()

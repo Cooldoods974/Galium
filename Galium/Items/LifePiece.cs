@@ -15,8 +15,8 @@ namespace Galium.Items
 
         public override void SetDefaults()
         {
-            item.width = 22;
-            item.height = 22;
+            item.width = 16;
+            item.height = 16;
             item.maxStack = 3;
             item.value = Item.buyPrice(0, 1, 50, 0); 
             item.value = Item.sellPrice(0, 0, 75, 0);

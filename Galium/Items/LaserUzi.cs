@@ -10,19 +10,19 @@ namespace Galium.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Laser Uzi");
+			DisplayName.SetDefault("Laser Rifle");
             Tooltip.SetDefault("PEW PEW PEW");
 		}
 
 		public override void SetDefaults()
 		{
-			item.damage = 60;
+			item.damage = 40;
             item.crit = 0;
 			item.ranged = true;
-			item.width = 54;
-			item.height = 20;
-			item.useTime = 4;
-			item.useAnimation = 4;
+			item.width = 66;
+			item.height = 28;
+			item.useTime = 7;
+			item.useAnimation = 7;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage
 			item.knockBack = 2;
@@ -41,6 +41,7 @@ namespace Galium.Items
 			ModRecipe recipe = new ModRecipe(mod);
 			recipe.AddIngredient(ItemID.Uzi);
             recipe.AddIngredient(ItemID.MeteoriteBar, 5);
+			recipe.AddIngredient(mod.ItemType("MoonPiece"), 10);
 			recipe.AddTile(TileID.MythrilAnvil);
 			recipe.SetResult(this);
 			recipe.AddRecipe();
@@ -48,17 +49,13 @@ namespace Galium.Items
        
         public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(-8, -5);
-		}
-        public override bool Shoot(Player player, ref Vector2 position, ref float speedX, ref float speedY, ref int type, ref int damage, ref float knockBack)
-		{
-			if (type == ProjectileID.Bullet) // or ProjectileID.WoodenArrowFriendly
-			{
-				type = ProjectileID.NanoBullet; // or ProjectileID.FireArrow;
-			}
-			return true; // return true to allow tmodloader to call Projectile.NewProjectile as normal
+			return new Vector2(-8, 0);
 		}
         
+        public override bool ConsumeAmmo(Player player)
+		{
+			return Main.rand.NextFloat() >= .10f;
+		}
 //-------------------------------------------------------------
 		// What if I wanted this gun to have a 38% chance not to consume ammo?
 		/*public override bool ConsumeAmmo(Player player)

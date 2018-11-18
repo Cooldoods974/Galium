@@ -11,13 +11,15 @@ namespace Galium.Items
         {
             DisplayName.SetDefault("MoonPiece");
             Tooltip.SetDefault("So Outer Space to where it doesn't even stick to the ground");
+            ItemID.Sets.ItemIconPulse[item.type] = true;
+			ItemID.Sets.ItemNoGravity[item.type] = true;
         }
 
         public override void SetDefaults()
         {
-            item.width = 30;
+            item.width = 22;
             item.height = 30;
-            item.maxStack = 999;
+            item.maxStack = 99;
             item.value = 15;
             item.rare = 0;
             // Set other item.X values here

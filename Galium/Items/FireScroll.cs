@@ -21,10 +21,10 @@ namespace Galium.Items
 			item.magic = true;
 			item.mana = 15;
 			item.noUseGraphic = true;
-			item.width = 1;
-			item.height = 1;
-			item.useTime = 14;
-			item.useAnimation = 14;
+			item.width = 28;
+			item.height = 30;
+			item.useTime = 20;
+			item.useAnimation = 20;
             item.shoot = ProjectileID.BallofFire;
 			item.useStyle = 5;
 			item.noMelee = true; //so the item's animation doesn't do damage

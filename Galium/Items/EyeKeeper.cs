@@ -12,17 +12,17 @@ namespace Galium.Items
 		}
 		public override void SetDefaults()
 		{
-			item.damage = 20;
+			item.damage = 10;
 			item.melee = true;
 			item.width = 36;
 			item.height = 36;
-			item.useTime = 25;
-			item.useAnimation = 25;
+			item.useTime = 19;
+			item.useAnimation = 19;
 			item.useStyle = 1;
 			item.knockBack = 10;
 			item.value = 10000;
-			item.crit = 0;
-			item.rare = 6;
+			item.crit = 5;
+			item.rare = 3;
 			item.UseSound = SoundID.Item1;
 			item.autoReuse = true;
 			item.useTurn = true;

@@ -10,16 +10,16 @@ namespace Galium.Items
 	{
 		public override void SetStaticDefaults()
 		{
-			DisplayName.SetDefault("Shotgun Revolver");
-            Tooltip.SetDefault("A shotgun and revolver... Not even gonna question.");
+			DisplayName.SetDefault("Sawed off Pistol");
+            Tooltip.SetDefault("A shotgun and a pistol... Not even gonna question.");
 		}
 
 		public override void SetDefaults()
 		{
 			item.damage = 20;
 			item.ranged = true;
-			item.width = 40;
-			item.height = 40;
+			item.width = 32;
+			item.height = 20;
 			item.useTime = 50;
 			item.useAnimation = 50;
 			item.useStyle = 5;
@@ -67,7 +67,7 @@ namespace Galium.Items
 		}
         public override Vector2? HoldoutOffset()
 		{
-			return new Vector2(-3, 0);
+			return new Vector2(0, 0);
 		}
 //-------------------------------------------------------------
 		// What if I wanted this gun to have a 38% chance not to consume ammo?

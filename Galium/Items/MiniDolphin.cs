@@ -16,7 +16,7 @@ namespace Galium.Items
 
 		public override void SetDefaults()
 		{
-			item.damage = 18;
+			item.damage = 17;
             item.crit = 0;
 			item.ranged = true;
 			item.width = 54;

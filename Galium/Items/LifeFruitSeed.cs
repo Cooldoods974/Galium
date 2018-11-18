@@ -10,7 +10,7 @@ namespace Galium.Items
         public override void SetStaticDefaults()
         {
             DisplayName.SetDefault("Life Fruit Seed");
-            Tooltip.SetDefault("Grow Your Favorite Type of Fruit");
+            Tooltip.SetDefault("Grow Your Favorite Type of Fruit!");
         }
 
         public override void SetDefaults()
@@ -25,6 +25,16 @@ namespace Galium.Items
             //item.value = Item.buyPrice(0, 0, 0, 0);  plat gold silv cop
             //item.value = Item.sellPrice(0, 0, 0, 0);
         }
+        public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(mod.ItemType("JungleSoul"));
+			recipe.AddIngredient(ItemID.BottledHoney);
+			recipe.AddIngredient(ItemID.JungleGrassSeeds);
+			recipe.AddTile(TileID.MythrilAnvil);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
 
     }
 }

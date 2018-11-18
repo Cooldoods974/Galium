@@ -15,9 +15,9 @@ namespace Galium.Items
 
         public override void SetDefaults()
         {
-            item.width = 30;
-            item.height = 30;
-            item.maxStack = 99;
+            item.width = 28;
+            item.height = 26;
+            item.maxStack = 999;
             item.value = 0;
             item.rare = 0;
             // Set other item.X values here

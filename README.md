@@ -1,2 +1,2 @@
 # Galium
-A mod that adds new content to the Game!
+A Content Pack that add alot of content to the game!
